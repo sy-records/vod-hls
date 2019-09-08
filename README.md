@@ -106,5 +106,6 @@ $data = Core::getCloudData($config, $secretKey);
 
 $res = json_decode($data,true);
 
-echo $res['data']['keyList'][0]['dk'];
+// 需要进行decode还原为二进制
+echo base64_decode($res['data']['keyList'][0]['dk']); 
 ```
