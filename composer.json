@@ -1,0 +1,20 @@
+{
+  "name": "sy-records/vod-hls",
+  "description": "Tencent cloud video HLS encryption.",
+  "type": "library",
+  "keywords": ["tencent","vod","video","hls"],
+  "homepage": "https://github.com/sy-records/vod-hls",
+  "authors": [
+    {
+      "name": "Luffy",
+      "email": "52o@qq52o.cn",
+      "homepage": "https://qq52o.me",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Luffy\\Tencent\\Vod\\": "src/"
+    }
+  }
+}
