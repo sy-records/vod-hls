@@ -1,6 +1,6 @@
 <?php
 /**
- * getkeyurl获取dk
+ * 获取视频解密密钥
  * User: lufei
  * Date: 2019/9/8
  * Email: lufei@swoole.com
@@ -10,6 +10,10 @@ include '../vendor/autoload.php';
 
 use Luffy\Tencent\Vod\Core;
 
+/**
+ * getkeyurl获取dk
+ * @url https://cloud.tencent.com/document/product/266/9643
+ */
 $config = [
 	"Action" => "DescribeDrmDataKey",
 	"edkList.0" => "", // 视频edk
