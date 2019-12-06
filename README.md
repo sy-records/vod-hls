@@ -64,6 +64,8 @@ $data = Core::getCloudData($config, $secretKey);
 
 ### 3. 获取视频信息（获取EDK）
 
+> 获取 EDK 时，drm 内容需要在视频转码完成后获取，需要依靠 [视频转码完成回调](https://cloud.tencent.com/document/product/266/7832) ，或多次请求 `GetVideoInfo`
+
 ```php
 /**
  * 获取视频信息
@@ -109,5 +111,7 @@ $res = json_decode($data,true);
 // 需要进行decode还原为二进制
 echo base64_decode($res['data']['keyList'][0]['dk']); 
 ```
+
+> EDK 和 DK 关系一一对应，可直接缓存
 
 至此，业务方成功返回 dk，播放器自动解码播放 🎉
